@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Purchase a Ticket</h1>
+    <form action="{{ url_for('main.purchase') }}" method="POST">
+        <label for="game_name">Game Name:</label>
+        <input type="text" id="game_name" name="game_name" required><br>
+        <label for="purchaser_name">Your Name:</label>
+        <input type="text" id="purchaser_name" name="purchaser_name" required><br>
+        <label for="purchaser_email">Your Email:</label>
+        <input type="email" id="purchaser_email" name="purchaser_email" required><br>
+        <button type="submit">Purchase</button>
+    </form>
+</body>
+</html>
